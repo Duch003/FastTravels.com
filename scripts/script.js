@@ -24,7 +24,7 @@ class AirportConnectionSearcher {
             return false;
         }
 
-        for(var i = 0; i < first.length; i++)
+        for(let i = 0; i < first.length; i++)
         {
             if(first[i].Name != second[i].Name)
             {
@@ -130,7 +130,7 @@ var airportsNames = [
     'BRS', 'CRL', 'BUD', 'DUB', 'EDI', 
     'EIN', 'GLA', 'HAM', 'CTA', 'KEF', 
     'CGN', 'SUF', 'LCA', 'LPL', 'LIS', 
-    'LTN', 'STN', 'MAD' ];
+    'LTN', 'STN', 'MAD' ].sort();
 
 function loadAirports() {
 
@@ -139,15 +139,15 @@ function loadAirports() {
     });
 
     $(airportsConnections).each((index, connection) => {
-        var from = findAirport(connection[0], airportsNodes);
-        var to = findAirport(connection[1], airportsNodes);
+        const from = findAirport(connection[0], airportsNodes);
+        const to = findAirport(connection[1], airportsNodes);
 
         from.siblings.push(to);
     });
 
     $(airportsConnections).each((index, connection) => {
-        var from = findAirport(connection[1], airportsNodes);
-        var to = findAirport(connection[0], airportsNodes);
+        const from = findAirport(connection[1], airportsNodes);
+        const to = findAirport(connection[0], airportsNodes);
 
         from.siblings.push(to);
     });
