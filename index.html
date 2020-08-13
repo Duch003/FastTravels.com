@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <title>FastTravels.com</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="IE=rdgr,chrome=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Sample one-page" />
+    <meta name="keywords" content="Flying, holidays, hire me" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+    <script src="https://kit.fontawesome.com/a74e1e9d87.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="Background">
+
+    <div class="container-flex">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logox64.png" alt="logo" />
+                <span>FastTravels.com</span>
+            </a>
+        </nav>
+    </div>
+
+    <div id='error' class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog bg-danger" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">FastTravels.com</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <strong>From</strong> and <strong>To</strong> are not allowed. Please select proper
+                                begining and destination.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='samePlace' class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog bg-success" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">FastTravels.com</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <strong>You</strong> are already here! :-)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main role="main" class="container">
+        <div class="row d-flex justify-content-around mt-2 mb-2">
+            <div class="col-md-4 col-sm-12">
+                <div class="card text-center">
+                    <img class="card-img-top" src="./images/carousel1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Dragée sweet chocolate marzipan. Cake tootsie roll oat cake liquorice.
+                            Wafer topping gingerbread sweet roll fruitcake chocolate cake ice cream biscuit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <div class="card text-center">
+                    <img class="card-img-top" src="./images/carousel2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lemon drops cake biscuit muffin lemon drops carrot cake muffin croissant
+                            cake. Sweet roll chocolate bar candy canes cotton candy. Jujubes icing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <div class="card text-center">
+                    <img class="card-img-top" src="./images/carousel3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Tootsie roll pudding pie jujubes tiramisu wafer. Chupa chups soufflé
+                            gingerbread gummies pastry jelly jelly-o apple pie toffee. Tootsie roll soufflé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center bg-light mt-5 py-3">
+            <div class="col">
+                <div class="row d-flex justify-content-center">
+                    <h3>
+                        Choose your flight!
+                        <small class="text-muted">Let adventure begin...</small>
+                    </h3>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-3 col-sm-12">
+                        <form>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 my-3">
+                                    <select id="fromDropdown" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>From</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 my-3">
+                                    <select id="toDropdown" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>To</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 my-3">
+                                    <button id="searchButton" type="button"
+                                        class="btn btn-success btn-lg btn-block">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="loader"></div>
+                        <div id="printedPath" class="row justify-content-center align-items-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer fixed-bottom bg-dark">
+        <div class="container-fluid clear-top">
+            <nav class="navbar nav mr-auto align-right">
+                <div class="row">
+                    <div class="col">
+                        <span>
+                            <a class="cleanLink" href="https://github.com/Duch003" target="_blank">
+                                <i class="fab fa-github-square fa-2x github"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span>
+                            <a class="cleanLink" href="https://www.linkedin.com/in/tomasz-mankin" target="_blank">
+                                <i class="fab fa-linkedin fa-2x linkedin"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark">
+                    <span class="navbar-brand mb-0 h1">&copy; Tomasz Mankin 2020</span>
+                </nav>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
