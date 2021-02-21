@@ -13,26 +13,6 @@ class AirportConnectionSearcher {
         return this._validPaths;
     }
 
-    sequenceEqual(first, second) {
-        if(first === null || second === null)
-        {
-            return false;
-        }
-
-        if(first.length!= second.length)
-        {
-            return false;
-        }
-
-        for(let i = 0; i < first.length; i++)
-        {
-            if(first[i].Name != second[i].Name)
-            {
-                return false;
-            }
-        }
-    }
-
     isLoop(from) {
         return this._currentPath.some(x => x.name === from.name);
     }
@@ -44,10 +24,6 @@ class AirportConnectionSearcher {
     findConnection(from, to) {
 
         if(this.isLoop(from)) {
-            return;
-        }
-
-        if(this._visitedPaths.some(x => this.sequenceEqual(x, this._currentPath))) {
             return;
         }
 
